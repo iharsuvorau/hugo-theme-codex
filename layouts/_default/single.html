@@ -21,7 +21,9 @@
           {{ partial "tags.html" .}}
           {{ template "_internal/disqus.html" . }}
           <footer class="post__footer">
-            {{ partial "social-icons.html" .}}
+            {{ if .Params.social }}
+              {{ partial "social-icons.html" .}}
+            {{ end }}
             <p>{{ replace .Site.Copyright "{year}" now.Year }}</p>
           </footer>
           </div>
