@@ -8,13 +8,16 @@
   <div class="splash">
 
     <h1>{{ .Params.heading }}<span class="fancy">.</span></h1>
-    {{ if isset .Params "handle" }}
+    {{- if isset .Params "handle" -}}
     <span class="handle">@{{ .Params.handle }}</span>
-    {{ end }}
+    {{- end -}}
+
+    {{- if isset .Params "subheading" -}}
     <h2>
       <em>{{ .Params.subheading }}</em><br>
       {{ .Params.description | markdownify}}
     </h2>
+    {{- end -}}
 
     {{/* partial "social-icons.html" . */}}
     {{ .Content }}

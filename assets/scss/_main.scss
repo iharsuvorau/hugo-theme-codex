@@ -19,4 +19,18 @@ main {
   @media screen and (max-width: $medium - 1) {
     padding-top: calc(3rem + #{$burgerContainerHeight});
   }
+
+  p {
+    max-width: 34em;
+  }
+
+  .splash {
+    max-width: 54em;
+  }
+
+  #references-list {
+    max-width: 54em;
+    font-size: 0.9rem;
+    opacity: 0.65;
+  }
 }
